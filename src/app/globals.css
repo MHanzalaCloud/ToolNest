@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas-abyss: #05050A;
+  --hacker-slate: #12121F;
+  --laser-cyan: #00F0FF;
+  --blaze-orange: #FF5500;
+  --matrix-lime: #00FF66;
+}
+
+body {
+  background-color: var(--canvas-abyss);
+  color: var(--laser-cyan);
+  font-family: 'JetBrains Mono', system-ui, -apple-system, BlinkMacSystemFont, monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(0, 240, 255, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 90% 80%, rgba(255, 85, 0, 0.12) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Cyber Grid Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* High-Contrast Blaze Orange CTA Button */
+.blaze-orange-btn {
+  background: #FF5500;
+  color: #05050A;
+  font-weight: 800;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
+}
+
+.blaze-orange-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 35px rgba(255, 85, 0, 0.8), 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+/* Hacker Slate Glass Cards */
+.cyber-card {
+  background: rgba(18, 18, 31, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+  background: rgba(18, 18, 31, 0.95);
+  border-color: var(--laser-cyan);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.25), 0 0 15px rgba(255, 85, 0, 0.2);
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05050A;
+}
+::-webkit-scrollbar-thumb {
+  background: #12121F;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5500;
+}
