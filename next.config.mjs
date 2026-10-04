@@ -15,9 +15,10 @@ const nextConfig = {
       {
         source: '/pdf/compress',
         destination: '/pdf',
+        permanent: true,
       },
     ];
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
