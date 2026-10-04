@@ -17,7 +17,7 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide text-[#00F0FF]/80">
-          <Link href="/pdf/merge" className="hover:text-[#FF5500] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5500] hover:after:w-full after:transition-all">PDF Suite</Link>
+          <Link href="/pdf" className="hover:text-[#FF5500] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5500] hover:after:w-full after:transition-all">PDF Suite</Link>
           <Link href="/image/resize" className="hover:text-[#FF5500] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5500] hover:after:w-full after:transition-all">Image Tools</Link>
           <Link href="/calculator/basic" className="hover:text-[#FF5500] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5500] hover:after:w-full after:transition-all">Calculators</Link>
           <Link href="/converter/unit" className="hover:text-[#FF5500] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#FF5500] hover:after:w-full after:transition-all">Converters</Link>
