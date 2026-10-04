@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FileText, Calculator, RefreshCw, Image as ImageIcon, ShieldCheck, Cpu, Lock, ArrowRight, Terminal, CheckCircle2 } from "lucide-react";
 
 const tools = [
-  { name: "PDF Suite", href: "/pdf/merge", icon: FileText, desc: "Merge, split, and re-order PDF documents client-side instantly." },
+  { name: "PDF Suite", href: "/pdf", icon: FileText, desc: "Merge, split, and re-order PDF documents client-side instantly." },
   { name: "Image Tools", href: "/image/resize", icon: ImageIcon, desc: "Compress, scale, and convert image formats locally in-browser." },
   { name: "Calculators", href: "/calculator/basic", icon: Calculator, desc: "Execute complex financial, developer, and scientific calculations." },
   { name: "Converters", href: "/converter/unit", icon: RefreshCw, desc: "Convert measurements, data bytes, and numeric formats with zero latency." },
@@ -69,7 +69,7 @@ export default function HomePage() {
         <h3 className="text-xl font-bold text-[#00F0FF]">Client File Execution Zone</h3>
         <p className="text-sm font-mono text-[#00F0FF]/60 max-w-lg mx-auto">Drop any PDF or Image file here for immediate local processing.</p>
         <div className="pt-2">
-          <Link href="/pdf/merge" className="blaze-orange-btn inline-block px-6 py-2.5 rounded text-xs uppercase tracking-widest">
+          <Link href="/pdf" className="blaze-orange-btn inline-block px-6 py-2.5 rounded text-xs uppercase tracking-widest">
             Select Local File
           </Link>
         </div>
