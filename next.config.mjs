@@ -1,16 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-
+  output: 'export', // Tells Next.js to generate static HTML/CSS/JS files
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export when using next/image
   },
-
-  experimental: {
-    serverActions: {
-      bodySizeLimit: 52428800,
-    },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        child_process: false,
+        net: false,
+        tls: false,
+      };
+    }
+    return config;
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
