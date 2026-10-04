@@ -1,10 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true, // Required for Cloudflare Pages static route separation
-  images: {
-    unoptimized: true,
+  async redirects() {
+    return [
+      {
+        source: '/pdf/merge',
+        destination: '/pdf',
+        permanent: true,
+      },
+      {
+        source: '/pdf/split',
+        destination: '/pdf',
+        permanent: true,
+      },
+      {
+        source: '/pdf/compress',
+        destination: '/pdf',
+      },
+    ];
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
